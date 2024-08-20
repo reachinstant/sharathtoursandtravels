@@ -1,0 +1,593 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.carousel-item {
+  height: 500px;
+}
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.transports {
+  padding: 60px 0;
+}
+
+.animated {
+  animation: fadeInUp 1s ease-out;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-custom {
+  background: linear-gradient(
+    135deg,
+    #00aaff,
+    #0044cc
+  ); /* Gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #ffffff; /* White color for text */
+}
+.navbar-custom .nav-link {
+  margin-left: 20px; /* Space between nav items */
+}
+.navbar-custom .nav-link:hover {
+  color: #ffcc00; /* Gold color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255,255,255,.5)" stroke-width="2" d="M4 6h22M4 15h22M4 24h22"/%3E%3C/svg%3E');
+}
+.banner {
+  background-image: url("images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid #0044cc; /* Bottom border matching navbar */
+}
+.banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.book-now-button {
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff5722; /* Vibrant color for visibility */
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: blink 1s infinite; /* Blinking effect */
+}
+.book-now-button:hover {
+  background-color: #e64a19; /* Darker shade on hover */
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.more-details {
+  background: linear-gradient(to right, #00b7ff 0%, #5dc0e7 50%, #8b8be0 100%); 
+  padding: 40px 0;
+}
+.details-content {
+  background: #ffffff; /* White background for text area */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  margin-right: 10px; /* Space between text and carousel */
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.intro-text {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+.subheading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.detail-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+.detail-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.detail-list li {
+  margin-bottom: 10px;
+}
+.carousel-inner img {
+  border-radius: 8px; /* Rounded corners for images */
+}
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  color: #fff;
+  border-radius: 8px; /* Rounded corners for caption */
+  padding: 10px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Semi-transparent background for controls */
+  border-radius: 50%; /* Rounded controls */
+}
+.badge {
+  font-size: 1rem;
+  margin: 5px;
+  padding: 10px 15px;
+}
+.badge-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+.badge-success {
+  background-color: #28a745;
+  color: #fff;
+}
+.badge-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+.badge-info {
+  background-color: #17a2b8;
+  color: #fff;
+}
+.comment-slide {
+  display: flex;
+}
+
+.opening-animation {
+  position: relative;
+  height: 100vh;
+  background: url("images/hero-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.opening-animation .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.opening-animation .container {
+  position: relative;
+  z-index: 2;
+}
+
+.main-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  animation: fadeInUp 2s ease-out;
+}
+
+.sub-heading {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-top: 10px;
+  animation: fadeInUp 2s ease-out 0.5s;
+}
+
+.description {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  animation: fadeInUp 2s ease-out 1s;
+}
+
+.animated-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 50px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.animated-button:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+.car-illustration {
+  position: absolute;
+  top: 10px; /* Adjust distance from the top as needed */
+  left: -150px; /* Start position off-screen */
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  animation: driveAcross 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes driveAcross {
+  0% {
+    transform: translateX(-150px); /* Start position */
+  }
+  100% {
+    transform: translateX(calc(100vw + 150px)); /* End position */
+  }
+}
+
+.links-references {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  border-bottom: 2px solid #007bff;
+}
+
+.links-references h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.links-references h5 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.links-references ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.links-references li {
+  margin-bottom: 10px;
+}
+
+.links-references a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.links-references a:hover {
+  color: #0056b3;
+}
+
+.social-icons a {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #0056b3;
+}
+
+/* Background image or color for the whole section */
+.contact-form-container {
+  background: url("images/contact-background.jpg") no-repeat center center/cover;
+  padding: 80px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-wrapper {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* White background with opacity */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form-wrapper h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.contact-form-wrapper .form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s;
+}
+
+.contact-form-wrapper .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.contact-form-wrapper .form-group label {
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form-wrapper .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 1.125rem;
+  padding: 12px;
+  border-radius: 50px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.contact-form-wrapper .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 20px;
+  }
+
+  .contact-form-wrapper h2 {
+    font-size: 2rem;
+  }
+}
+
+.contact-form-container.scrolled {
+  opacity: 1;
+}
+
+.contact-form-container.scrolled {
+  opacity: 1;
+}
+
+.contact-form-wrapper {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* White background with opacity */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px; /* Adjust based on your needs */
+}
+
+/* Custom CSS for card spacing */
+.card {
+  margin-bottom: 30px; /* Adjust the spacing between rows of cards */
+}
+
+/* Optional: Adds space to the top and bottom of the row */
+.row {
+  margin-top: 15px; /* Compensates for the negative margin */
+  margin-bottom: -15px;
+}
+
+.car-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensures the video covers the entire screen */
+  z-index: -1; /* Sends the video behind other content */
+}
+.btn {
+  transition: background-color 0.3s, transform 0.2s;
+}
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+.card {
+  border-radius: 10px;
+}
+.card-img-top {
+  border-radius: 10px 10px 0 0;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Added shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-img-top {
+  border-bottom: 1px solid #007bff;
+  height: 200px;
+  object-fit: cover;
+}
+
+.container.transports {
+  padding: 50px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #333;
+}
+
+.transport-card {
+  margin-bottom: 30px;
+}
+
+
+
+/* Button-specific styles */
+.btn-primary {
+  background-color: #007bff; /* Blue color for Book Your Ride */
+}
+
+.btn-call-now {
+  background-color: #848d2e; /* Green color for Call Now */
+}
+
+.btn-whatsapp {
+  background-color: #25d366; /* WhatsApp green color */
+}
+
+/* Hover effects */
+.btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Optional: Add animation effect */
+.animated-button {
+  animation: pulse 1.5s infinite; /* Example of a pulsing animation */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center; /* Center buttons horizontally */
+  margin-top: 20px; /* Space above the buttons */
+}
+
+.btn {
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  line-height: 1; /* Ensure consistent vertical alignment */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #25D366; /* WhatsApp green */
+  transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E; /* Darker green for hover effect */
+}
+
+.btn-whatsapp i {
+  margin-right: 8px; /* Space between icon and text */
+}
