@@ -1,10 +1,10 @@
 <?php
 // Database configuration
-$servername = "localhost";  // Your database server
-$username = "root";         // Your database username
-$password = "";             // Your database password
-$dbname = "sharath";  // Your database name
-
+$host = '127.0.0.1:3306'; // Database host
+$dbname = 'u327417883_sharath'; // Database name
+$username = 'u327417883_sharath'; // Database username
+$password = 'Hjj$P[7pC'; // Database password
+// 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 

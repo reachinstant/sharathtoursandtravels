@@ -2,11 +2,11 @@
 header('Content-Type: application/json');
 
 // Database configuration
-$host = 'localhost'; // Database host
-$dbname = 'sharath'; // Database name
-$username = 'root'; // Database username
-$password = ''; // Database password
-// Hjj$P[7pC
+$host = '127.0.0.1:3306'; // Database host
+$dbname = 'u327417883_sharath'; // Database name
+$username = 'u327417883_sharath'; // Database username
+$password = 'Hjj$P[7pC'; // Database password
+// 
 
 // Create connection
 $conn = new mysqli($host, $username, $password, $dbname);
@@ -23,8 +23,8 @@ $message = $_POST['message'];
 $phone = $_POST['phone'];
 
 // Prepare and bind
-$stmt = $conn->prepare("INSERT INTO contact_form (name, email, phone, message) VALUES (?, ?, ?,?)");
-$stmt->bind_param("ssss", $name, $email, $phone , $message);
+$stmt = $conn->prepare("INSERT INTO contact_form (name, email,phone,message) VALUES (?, ?, ?, ?)");
+$stmt->bind_param("ssss", $name, $email,$phone,$message );
 
 // Execute statement
 if ($stmt->execute()) {
